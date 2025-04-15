@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services - MyWebsite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 font-sans text-white bg-cover bg-fixed bg-center" style="background-image: linear-gradient(rgba(0,100,0,0.5),rgba(0,100,0,0.5)), url('/greenBG.jpg');">
+
+  <!-- Navbar Start -->
+  <nav class="bg-black bg-opacity-70 fixed w-full top-0 left-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-green-300 text-2xl font-bold">MyWebsite</div>
+      <ul class="flex space-x-6 text-white text-base">
+        <li><a href="index.html" class="hover:text-green-300 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-green-300 transition">About Us</a></li>
+        <li><a href="#" class="hover:text-green-300 transition">Services</a></li>
+        <li><a href="contact.html" class="hover:text-green-300 transition">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Main Content -->
+  <div class="w-full h-screen bg-cover bg-top flex items-center justify-center pt-20" style="background-image: url('/backgroundimage.jpg');">
+    <div class="bg-black bg-opacity-50 p-8 rounded-xl max-w-xl w-full mx-4">
+      <h1 class="text-green-300 text-3xl font-bold mb-4">Our Services</h1>
+      <p class="mb-4">We offer a variety of gardening-related services to support plant lovers:</p>
+      <ul class="list-none p-0 space-y-2 text-lg">
+        <li>Plant Care Guides & Tips</li>
+        <li>Seasonal Gardening Advice</li>
+        <li>Plant Identification Assistance</li>
+        <li>Online Gardening Workshops</li>
+        <li>Tool Recommendations</li>
+      </ul>
+      <button class="mt-6 px-5 py-2 text-black text-base font-semibold bg-green-300 rounded-md hover:bg-green-400 transition" onclick="showGreeting()">
+        Click for a Greeting
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function showGreeting() {
+      alert("Thank you for visiting our Gardening Services page!");
+    }
+  </script>
+</body>
+</html>

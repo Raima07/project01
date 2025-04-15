@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeny</title>
+    <link href="output.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-lime-200 font-lora">
+
+    <div class="container mx-auto px-4 h-screen flex flex-col">
+
+        <!-- Header -->
+        <header class="flex items-center justify-between py-4">
+            <div class="text-xl font-bold text-green-700">
+                <span class="mr-2">🍀</span>Greeny
+            </div>
+
+            <!-- Search Bar -->
+            <div>
+                <input type="text" placeholder="Type to search..." class="md:w-2xl px-2 py-1 rounded-xl border border-green-400 focus:outline-none focus:ring-green-500 focus:border-green-600">
+                <ion-icon name="camera" class="login-with-each-icon hover:text-green-800"></ion-icon>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-4 items-center">
+                <a href="#" class="hover:text-green-500">Home</a>
+                <a href="about.html" class="hover:text-green-500">About Us</a>
+                <a href="service.html" class="hover:text-green-500">Services</a>
+                <a href="contact.html" class="hover:text-green-500">Contact Us</a>
+            </nav>
+        </header>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-lime-100 py-2 px-4 rounded-md shadow-md absolute top-20 right-4">
+            <a href="#" class="block py-1 hover:text-green-500">Home</a>
+            <a href="about.html" class="block py-1 hover:text-green-500">About Us</a>
+            <a href="service.html" class="block py-1 hover:text-green-500">Services</a>
+            <a href="contact.html" class="block py-1 hover:text-green-500">Contact Us</a>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex items-center justify-center">
+            <div class="md:flex md:items-center md:justify-around w-full">
+
+                <div class="inline">
+                    <h1 class="md:text-6xl text-3xl font-bold text-green-950">GARDEN</h1>
+                    <h3 class="md:text-5xl text-2xl text-green-400">Welcome to <span class="text-green-950">Plant</span> world!</h3>
+                    <p class="md:text-2xl text-lg text-green-400"> I will tell you about <span class="change-plant-name"> </span><br>Let's explore Together.</p><br>
+                    <button id="SignInButton" class="cursor-pointer md:w-1/2 w-1/4 py-2 px-5 rounded-tl-2xl rounded-br-2xl text-lg mr-7 border-2 border-green-700 text-green-800 hover:text-white shadow-lg shadow-green-300 transition hover:bg-green-700">Sign In</button>
+                </div>
+
+                <!-- Plant Image (Placeholder) -->
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="/tree1.png" alt="Tree" class="max-w-md rounded-lg">
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Sign In / Sign Up Modal -->
+    <div id="authModal" class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-transparent backdrop-blur-lg rounded-md shadow-2xl w-96 h-auto p-8 md:w-1/3 md:p-10">
+        <div class="">
+            <!-- Close Button -->
+            <button id="closeModalButton" class="absolute top-2 right-2 rounded-full border-2 border-gray-600 text-gray-600 hover:text-gray-800 hover:border-gray-600">
+                <svg class="h-4 w-4 fill-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div id="signInForm" class="">
+                <h2 class="text-2xl font-bold mb-4 text-center">Log In</h2>
+                <input type="email" placeholder="Email" class="bg-transparent backdrop-blur-lg rounded-full shadow-xl p-2 w-full mb-3 border-none outline-none">
+                <input type="password" placeholder="Password" class="bg-transparent backdrop-blur-lg rounded-full shadow-xl p-2 w-full mb-3 border-none outline-none">
+
+                <div class="flex justify-between mb-3">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#" class="text-green-500">Forgot Password?</a>
+                </div>
+
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full w-full mb-4">Sign In</button>
+            </div>
+
+            <div id="signUpForm" class="hidden">
+                <h2 class="text-2xl font-bold mb-4 text-center">Sign Up</h2>
+                <input type="email" placeholder="Email" class="bg-transparent backdrop-blur-lg rounded-full shadow-xl p-2 w-full mb-3 border-none outline-none">
+                <input type="password" placeholder="Password" class="bg-transparent backdrop-blur-lg rounded-full shadow-xl p-2 w-full mb-3 border-none outline-none">
+                
+                <div class="flex justify-between mb-3">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#" class="text-green-500">Forgot Password?</a>
+                </div>
+
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full w-full mb-4">Sign Up</button>
+            </div>
+
+            <!-- Social Login Buttons -->
+            <div class="flex justify-center space-x-4 my-4">
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"><ion-icon name="logo-google" class="login-with-each-icon"></ion-icon></button>
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"><ion-icon name="mail" class="login-with-each-icon"></ion-icon></button>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex justify-evenly items-center mb-4">
+                <button id="signInTabButton"
+                    class="bg-green-700 text-white font-bold py-2 px-6 rounded-full">Sign In</button>
+                <button id="signUpTabButton"
+                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <!--modal-->
+    <div id="upload-modal" class="modal hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4 shadow-lg">
+            <div class="modal-content">
+                <p class="text-lg font-semibold mb-2">Upload Image</p>
+                <input type="file" id="image-upload" accept="image/*" class="mb-3">
+                <button id="analyze-btn" class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded-full">Analyze</button>
+                <button id="close-modal" class="mt-2 text-gray-600 hover:text-gray-800">Close</button>
+            </div>
+    </div>
+        
+    <!-- Result Section -->
+    <div id="result" class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4 shadow-lg">
+            <h3 class="text-xl font-bold mb-2">Plant Analysis Result:</h3>
+            <p id="plant-name" class="mb-1"></p>
+            <p id="health-status"></p>
+            <button id="close-modal2" class="mt-2 text-gray-600 hover:text-gray-800">Close</button>
+    </div>
+
+    <script src="toggle.js"></script>
+    <script src="image_upload.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

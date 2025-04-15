@@ -1,0 +1,26 @@
+html {
+    scroll-behavior: smooth;
+  }  
+
+/* animation */
+.change-plant-name:after{
+    content: '';
+    animation: changetext 10s infinite linear;
+    color: #092518;
+    text-shadow: 0 0 3px #fffefe30;
+    font-weight: bold;
+}
+
+@keyframes changetext{
+    5%{content: "Lily";}
+    10%{content: "Fiddle";}
+    20%{content: "Orchid"}
+    30%{content: "Eucalyptus";}
+    40%{content: "Marigold";}
+    50%{content: "Shoeblackplant";}
+    60%{content: "Cactus";}
+    70%{content: "Spider plant";}
+    80%{content: "Jade plant";}
+    90%{content: "Hydrena";}
+    100%{content: "many more";}
+}
